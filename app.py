@@ -152,9 +152,6 @@ with tab5:
         encryption_pipeline, quantum_state_cloud, entropy_heatmap
     )
 
-    if st.button("Show QKD Timeline"):
-        st.plotly_chart(qkd_timeline(), use_container_width=True)
-
     if st.button("Show Rotating Qubit Animation"):
         st.plotly_chart(rotating_qubit_animation(), use_container_width=True)
 

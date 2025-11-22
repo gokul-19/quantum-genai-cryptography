@@ -1,88 +1,47 @@
-# Quantum-Inspired GenAI Cryptography  
-Hybrid Classical–Quantum Encryption Framework  
+# Quantum-Inspired GenAI Cryptography
 
-## 🔐 Overview  
-This repository implements a hybrid cryptosystem combining:  
-- **QGAN-based key generation**  
-- **QKD-style BB84 exchange**  
-- **AES-CFB encryption**  
-- **Quantum-inspired preprocessing**  
-- **Wallet-based identity system**  
-- **Advanced Streamlit dashboard with visualizations**
+A hybrid classical–quantum cryptography demonstration using QGAN-based key generation, QKD simulation, and AES-CFB encryption.
 
----
+## 🚀 Live Demo
+Click below to run the app:
 
-## 🚀 Features  
-### 1. QGAN Key Generation  
-Uses a trained Generator model to derive quantum-inspired keys.
+🔗 **Demo Link:** https://your-demo-link-here.com  
+(Replace with actual deployed Streamlit/Render/HuggingFace link)
 
-### 2. QKD (BB84) Simulation  
-Generates shared secret keys using a noisy quantum exchange simulation.
+## 📌 Features
+- QGAN-based key generation  
+- BB84-style QKD simulation  
+- Hybrid encryption/decryption  
+- Quantum visualizations  
+- Wallet identity manager  
 
-### 3. Hybrid Encryption  
-Pipeline:  
-1. Quantum-inspired preprocessing  
-2. AES-CFB encryption  
-3. Post-quantum signature hashing  
+## 👥 Team Members
+- **B Sreeshanth** – 22bds016  
+- **G Gokul** – 22bds026  
+- **M Navadeep** – 22bds040  
+- **G Sandeep** – 22bcs043  
 
-### 4. Wallet System  
-- Save identities  
-- Load identities  
-- Generate keys for users  
-
-### 5. Quantum Visualizations  
-- Rotating Qubit Animation  
-- QGAN Latent Explorer  
-- Encryption Pipeline Diagram  
-- Quantum State Cloud  
-- Entropy Heatmap  
-
----
-
-## 📁 Folder Structure  
-```
-├── app.py
-├── crypto_engine.py
-├── qgan_engine.py
-├── wallet_engine.py
-├── multiuser_exchange.py
-├── visualizations.py
-├── models/
-│   └── generator.pth
-├── README.md
-```
-
----
-
-## 🛠 Installation  
+## 📦 Installation
 ```bash
 pip install -r requirements.txt
+streamlit run app.py
 ```
 
----
-
-## ▶️ Run App  
+## 🧪 Run App
 ```bash
 streamlit run app.py
 ```
 
----
+## 📁 Project Structure
+```
+├── app.py
+├── qgan_engine.py
+├── crypto_engine.py
+├── visualizations.py
+├── wallet_engine.py
+├── multiuser_exchange.py
+└── README.md
+```
 
-## 👥 Team Members  
-| Name | Roll No | Team |
-|------|---------|------|
-| B Sreeshanth | 22BDS016 | Team 1 |
-| G Gokul | 22BDS026 | Team 2 |
-| M Navadeep | 22BDS040 | Team 3 |
-| G Sandeep | 22BCS043 | Team 4 |
-
----
-
-## 📘 Course  
-**Quantum GenAI – IIIT Dharwad**
-
----
-
-## 📜 License  
-This project is for academic use under IIIT Dharwad.
-
+## 📜 License
+MIT License

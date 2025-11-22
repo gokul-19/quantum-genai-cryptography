@@ -33,7 +33,14 @@ generator = None
 if startup_load == "Yes":
     generator = load_generator(checkpoint)
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["QGAN KeyGen", "QKD Exchange", "Encrypt / Decrypt", "Wallet", "Bloch Sphere"])
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+    "QGAN KeyGen", 
+    "QKD Exchange", 
+    "Encrypt / Decrypt", 
+    "Wallet", 
+    "Bloch Sphere",
+    "Visualizations"
+])
 
 # ---------------- Tab 1: QGAN KeyGen ----------------
 with tab1:
@@ -136,11 +143,34 @@ with tab4:
         except Exception as e:
             st.error(str(e))
 
-# ---------------- Tab 5: Bloch Sphere ----------------
-with tab5:
-    st.subheader("Bloch Sphere Visualization")
-    components.html(open("animations.html", "r").read(), height=260)
-    st.markdown("Interactive Bloch sphere (state vector placeholder)")
-    # Show empty sphere at first:
-    fig = bloch_sphere(None)
-    st.plotly_chart(fig, use_container_width=True)
+# ---------------- Tab 5: Visualizations ----------------
+with tab6:
+    st.header("Quantum Visualizations")
+
+    from visualizations import (
+        qkd_timeline, rotating_qubit_animation, qgan_latent_explorer,
+        encryption_pipeline, quantum_state_cloud, entropy_heatmap
+    )
+
+    if st.button("Show QKD Timeline"):
+        st.plotly_chart(qkd_timeline(), use_container_width=True)
+
+    if st.button("Show Rotating Qubit Animation"):
+        st.plotly_chart(rotating_qubit_animation(), use_container_width=True)
+
+    if st.button("Show QGAN Latent Explorer"):
+        if generator is None:
+            st.error("Load generator first!")
+        else:
+            st.plotly_chart(qgan_latent_explorer(generator), use_container_width=True)
+
+    if st.button("Show Encryption Pipeline Diagram"):
+        st.plotly_chart(encryption_pipeline(), use_container_width=True)
+
+    if st.button("Show Quantum State Cloud"):
+        st.plotly_chart(quantum_state_cloud(), use_container_width=True)
+
+    if st.button("Show Entropy Heatmap"):
+        st.plotly_chart(entropy_heatmap(), use_container_width=True)
+
+    

@@ -4,24 +4,9 @@ import plotly.graph_objects as go
 import numpy as np
 import random
 
-# --------------------------------------------------------
-# 1. QKD Timeline
-# --------------------------------------------------------
 
-def qkd_timeline():
-    df = [
-        dict(Task="Alice chooses bits", Start='2025-01-01', Finish='2025-01-02'),
-        dict(Task="Alice chooses bases", Start='2025-01-02', Finish='2025-01-03'),
-        dict(Task="Quantum transmission", Start='2025-01-03', Finish='2025-01-04'),
-        dict(Task="Bob measures", Start='2025-01-04', Finish='2025-01-05'),
-        dict(Task="Basis reconciliation", Start='2025-01-05', Finish='2025-01-06'),
-        dict(Task="Key extraction", Start='2025-01-06', Finish='2025-01-07')
-    ]
-    
-    fig = ff.create_gantt(df, index_col='Task', title="QKD Process Timeline", show_colorbar=True)
-    return fig
 # --------------------------------------------------------
-# 2. Rotating Qubit Animation
+# 1. Rotating Qubit Animation
 # --------------------------------------------------------
 
 def rotating_qubit_animation():
